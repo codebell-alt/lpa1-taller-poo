@@ -49,3 +49,35 @@ class Armario(Mueble):
 
     def calcular_precio_final(self):
         return self.precio * 1.15  # 15% extra por puertas
+    
+    # NUEVA CLASE INVENTARIO
+class Inventario:
+    """
+    Clase para gestionar el inventario de la mueblería.
+    Permite agregar, eliminar y mostrar muebles en el inventario.
+    """
+    def __init__(self):
+        self.muebles = []  # Lista para almacenar los muebles
+
+    def agregar_mueble(self, mueble):
+        """
+        Agrega un mueble al inventario
+        """
+        self.muebles.append(mueble)
+
+    def eliminar_mueble(self, mueble):
+        #Elimina un mueble del inventario si existe.
+    
+        if mueble in self.muebles:
+            self.muebles.remove(mueble)
+        else:
+            print("El mueble no está en el inventario.")
+
+    def mostrar_inventario(self):
+        """Muestra todos los muebles en el inventario."""
+        if self.muebles:
+            print("\nInventario de la Mueblería:")
+            for mueble in self.muebles:
+                print(mueble)
+        else:
+            print("El inventario está vacío.")
