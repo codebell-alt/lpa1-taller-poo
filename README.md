@@ -29,3 +29,21 @@ GitHub: [codebell-alt](https://github.com/codebell-alt)
 - **Pruebas Unitarias:** Garantizar la calidad del código mediante `pytest`.
 - **Uso de Git:** Gestionar los cambios con `Git` y realizar commits atómicos.
 - **Documentación:** Mantener el `README.md` actualizado y documentar el código cuando sea necesario.
+
+## Uso de la Interfaz de Línea de Comandos (CLI)
+
+Para interactuar con el sistema de gestión de mueblería desde la terminal, sigue estos pasos:
+
+1. **Abrir la terminal en la carpeta del proyecto**  
+   Asegurarse de estar en el directorio donde se encuentra el archivo `cli.py`.
+
+2. **Ejecutar los siguientes comandos en orden**  
+   ```python
+   python cli.py agregar silla madera 80
+   python cli.py agregar mesa metal 120
+   python cli.py agregar armario plastico 250
+   python cli.py mostrar  # Muestra todos los muebles en el inventario
+   python cli.py guardar  # Guarda manualmente el inventario (aunque se guarda automáticamente)
+   python cli.py cargar   # Carga el inventario desde el archivo JSON
+   python cli.py descuento 0 10  # Aplica un 10% de descuento al primer mueble
+   python cli.py mostrar  # Verifica que el descuento se aplicó correctamente
